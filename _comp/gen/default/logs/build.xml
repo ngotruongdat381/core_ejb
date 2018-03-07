@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    development component
+                     name: kafka/core_ejb
+                   vendor: advantco.com
+                     type: J2EE
+                 sub-type: EJBModule
+              type-vendor: sap.com
+
+       software component
+                     name: MyComponents
+                   vendor: demo.sap.com
+
+                 location: localDevelopment
+          source location: gary.dat.ngo@GARY-PC
+            build variant: default
+
+    building on GARY-PC, Windows 10/amd64, version 10.0
+    using Java VM 'Java HotSpot(TM) 64-Bit Server VM', version 25.151-b12 (Oracle Corporation)
+    build started at 2018-02-08 16:27:11 GMT+07:00 (ICT)
+
+    Build Plugin 'EJBModulePlugin', Version 7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:05:07 +0200, CL245679)
+    detailed versions:
+    sap.com:tc/bi/anttasks#def     7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:04:07 +0200, CL245679)
+    sap.com:tc/bi/bp/ejbmodule#ejb 7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:05:07 +0200, CL245679)
+    sap.com:tc/bi/core#def         7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:05:34 +0200, CL245679)
+    sap.com:tc/bi/exception#def    7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:04:06 +0200, CL245679)
+    sap.com:tc/bi/extddicdb#def    7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:04:14 +0200, CL245679)
+    sap.com:tc/bi/extsql#def       7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:04:08 +0200, CL245679)
+    sap.com:tc/bi/framework#def    7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:01:03 +0200, CL245679)
+    sap.com:tc/bi/i18n#def         7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:04:02 +0200, CL245679)
+    sap.com:tc/bi/javatech#def     7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:01:51 +0200, CL245679)
+    sap.com:tc/bi/jdoc#def         7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:04:06 +0200, CL245679)
+    sap.com:tc/bi/jdoc/util#def    7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:01:35 +0200, CL245679)
+    sap.com:tc/bi/jlincbs#def      7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:04:22 +0200, CL245679)
+    sap.com:tc/bi/settings#version 7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:02:47 +0200, CL245679)
+    sap.com:tc/bi/util#util        7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:01:17 +0200, CL245679)
+    sap.com:tc/bi/velocity#def     7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:04:02 +0200, CL245679)
+    sap.com:tc/bi/xml#def          7.30 SP 7 (NW750CORE_07_REL, built on 2017-04-10 20:04:03 +0200, CL245679)
+ -->
+<project name="DC Build"
+         default="build"
+         basedir=".">
+<taskdef name="checkfileset" classname="com.sap.tools.ant.taskdefs.EmptyFilesetCheck"/>
+<taskdef name="jlinppcheck" classname="com.sap.tc.buildplugin.pp.ant.JLinEECheckTask"/>
+<taskdef name="pppacker" classname="com.sap.tc.buildplugin.pp.PPPackTask"/>
+<taskdef name="propertybag" classname="com.sap.tools.ant.taskdefs.PropertyBag"/>
+<taskdef name="timer" classname="com.sap.tools.ant.taskdefs.Timer"/>
+<taskdef name="xlf2prop" classname="com.sap.tc.buildplugin.util.XlfConverter"/>
+
+<target name="compile">
+<mkdir dir="D:\605\Tmp\workspce1.jdi\LocalDevelopment\t\C8FC150224D3E3B83A22A862CE820312\classes"/>
+<!-- begin generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- No *.sqlj files found, skipping SQLJ preprocessing. -->
+<!-- end generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- begin generator id 'sap.com~javac', type 'sap.com~javac' -->
+<echo message="Forking Java compiler as a new process: D:\javaspace\sapjvm_8.1.010\sapjvm_8\bin\javac.exe"/>
+<timer/>
+<echo message="Settings:"/>
+<echo message="        debug: on"/>
+<echo message="     optimize: off"/>
+<echo message="  deprecation: default"/>
+<echo message="      verbose: default"/>
+<echo message="     encoding: UTF-8"/>
+<echo message="       source: default"/>
+<echo message="       target: default"/>
+<echo message="  source path: D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\core_ejb\_comp\ejbModule"/>
+<echo message="   class path:"/>
+<echo message="      D:\605\Tmp\workspce1.jdi\LocalDevelopment\ENGFACADE\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\ec~java~jsf~api.jar"/>
+<echo message="      D:\605\Tmp\workspce1.jdi\LocalDevelopment\ENGFACADE\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\engine.jee5.facade.jar"/>
+<echo message="      D:\605\Tmp\workspce1.jdi\LocalDevelopment\ENGFACADE\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\orpersistence_client_lib_filtered.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\AdvantcoBaseLib.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\AdvantcoBaseLibExt.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\AdvantcoBaseNW.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\AdvantcoBaseNWAF.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\antlr4-runtime-4.7.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\avro-1.8.2.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\com.sap.aii.af.ms.ifc_api.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\commons-csv-1.4.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\guava-21.0.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\jackson-core-asl-1.9.13.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\janino-3.0.7.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\slf4j-api-1.7.25.jar"/>
+<echo message="      D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\slice-0.29.jar"/>
+<echo message="   output dir: D:\605\Tmp\workspce1.jdi\LocalDevelopment\t\C8FC150224D3E3B83A22A862CE820312\classes"/>
+<checkfileset fail="false">
+<fileset dir="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\core_ejb\_comp\ejbModule">
+<include name="**/*.class"/>
+</fileset>
+</checkfileset>
+<javac includeAntRuntime="no"
+       destdir="D:\605\Tmp\workspce1.jdi\LocalDevelopment\t\C8FC150224D3E3B83A22A862CE820312\classes"
+       encoding="UTF-8"
+       fork="true"
+       executable="D:\javaspace\sapjvm_8.1.010\sapjvm_8\bin\javac.exe"
+       memoryMaximumSize="1073741824"
+       deprecation="false"
+       debug="on"
+       compiler="com.sap.tc.buildplugin.gen.JavacAdapter"
+       tempdir="D:\605\Tmp\workspce1.jdi\LocalDevelopment\t\C8FC150224D3E3B83A22A862CE820312">
+<src path="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\core_ejb\_comp\ejbModule"/>
+<include name="**/*.java"/>
+<classpath>
+<pathelement location="D:\605\Tmp\workspce1.jdi\LocalDevelopment\ENGFACADE\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\ec~java~jsf~api.jar"/>
+<pathelement location="D:\605\Tmp\workspce1.jdi\LocalDevelopment\ENGFACADE\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\engine.jee5.facade.jar"/>
+<pathelement location="D:\605\Tmp\workspce1.jdi\LocalDevelopment\ENGFACADE\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\orpersistence_client_lib_filtered.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\AdvantcoBaseLib.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\AdvantcoBaseLibExt.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\AdvantcoBaseNW.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\AdvantcoBaseNWAF.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\antlr4-runtime-4.7.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\avro-1.8.2.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\com.sap.aii.af.ms.ifc_api.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\commons-csv-1.4.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\guava-21.0.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\jackson-core-asl-1.9.13.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\janino-3.0.7.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\slf4j-api-1.7.25.jar"/>
+<pathelement location="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\libs\_comp\gen\default\public\api\lib\java\slice-0.29.jar"/>
+</classpath>
+</javac>
+<timer message="Java compilation finished in "/>
+<!-- end generator id 'sap.com~javac', type 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~jlin' for generator id 'sap.com~javac' -->
+<!-- JLin disabled. -->
+<!-- end generator extension type 'sap.com~jlin' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- No *.sqlj files found, skipping SQLJ post-processing. -->
+<!-- end generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~jdo' for generator id 'sap.com~javac' -->
+<!-- No *.jdo files found, skipping JDO enhancer. -->
+<!-- end generator extension type 'sap.com~jdo' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~xlf2prop' for generator id 'sap.com~javac' -->
+<echo message="Start XLF conversion"/>
+<timer/>
+<xlf2prop todir="D:\605\Tmp\workspce1.jdi\LocalDevelopment\t\C8FC150224D3E3B83A22A862CE820312\classes">
+<fileset dir="D:\Gary\AdvantcoSVN\Development\KAFKA\src\PI\KAFKAWorkbench\advantco.com\core_ejb\_comp\ejbModule"/>
+</xlf2prop>
+<timer message="XLF conversion finished in "/>
+<!-- end generator extension type 'sap.com~xlf2prop' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~jdoc' for generator id 'sap.com~javac' -->
+<!-- Javadoc generation disabled. -->
+<!-- end generator extension type 'sap.com~jdoc' for generator id 'sap.com~javac' -->
+</target>
+
+<target name="createPublicParts" depends="compile">
+<timer/>
+<pppacker ppname="client">
+</pppacker>
+<timer message="Packing of public part 'client' finished in "/>
+<timer/>
+<pppacker ppname="ejbjar">
+</pppacker>
+<timer message="Packing of public part 'ejbjar' finished in "/>
+<jlinppcheck/>
+</target>
+
+<target name="build" depends="compile,createPublicParts">
+
+</target>
+</project>

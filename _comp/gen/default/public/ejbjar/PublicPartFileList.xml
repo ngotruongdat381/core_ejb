@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<content version="4">
+<metadata>
+<development-component>
+<name>kafka/core_ejb</name>
+<vendor>advantco.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>J2EE</type>
+<sub-type>EJBModule</sub-type>
+</component-type>
+</development-component>
+<public-part>
+<name>ejbjar</name>
+<purpose>assembly</purpose>
+</public-part>
+<dependencies>
+<dependency>
+<dc-ref>
+<name>kafka/libs</name>
+<vendor>advantco.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>kafka/libs</name>
+<vendor>advantco.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="assembly">archives</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>engine.jee5.facade</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>J2EE Server Component</type>
+<sub-type>Primary Library</sub-type>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+</dependencies>
+</metadata>
+<source-components/>
+<archives>
+<archive location="javalib" path="lib/java/advantco.com~kafka~core_ejb~ejbjar.jar" type="jar">
+<property key="attributes">jar,java-library</property>
+</archive>
+<archive location="srcarchive" path="src/java/src.zip" type="zip"/>
+</archives>
+<entities>
+<entity>
+<name>AdvArvoDataFormat</name>
+<package>com/advantco/kafka/format/avro</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/format/avro/">
+<file path="com/advantco/kafka/format/avro/AdvArvoDataFormat$AvroSchemaType.class" source-path="AdvArvoDataFormat$AvroSchemaType.class"/>
+<file path="com/advantco/kafka/format/avro/AdvArvoDataFormat.class" source-path="AdvArvoDataFormat.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/format/avro/">
+<file path="com/advantco/kafka/format/avro/AdvArvoDataFormat.java" source-path="AdvArvoDataFormat.java"/>
+</fileset>
+</entity>
+<entity>
+<name>AdvDataFormat</name>
+<package>com/advantco/kafka/format</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/format/">
+<file path="com/advantco/kafka/format/AdvDataFormat.class" source-path="AdvDataFormat.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/format/">
+<file path="com/advantco/kafka/format/AdvDataFormat.java" source-path="AdvDataFormat.java"/>
+</fileset>
+</entity>
+<entity>
+<name>AdvKafkaConnection</name>
+<package>com/advantco/kafka</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/">
+<file path="com/advantco/kafka/AdvKafkaConnection$KConnectionsHandlerImpl.class" source-path="AdvKafkaConnection$KConnectionsHandlerImpl.class"/>
+<file path="com/advantco/kafka/AdvKafkaConnection.class" source-path="AdvKafkaConnection.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/">
+<file path="com/advantco/kafka/AdvKafkaConnection.java" source-path="AdvKafkaConnection.java"/>
+</fileset>
+</entity>
+<entity>
+<name>AdvKafkaConsumer</name>
+<package>com/advantco/kafka</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/">
+<file path="com/advantco/kafka/AdvKafkaConsumer.class" source-path="AdvKafkaConsumer.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/">
+<file path="com/advantco/kafka/AdvKafkaConsumer.java" source-path="AdvKafkaConsumer.java"/>
+</fileset>
+</entity>
+<entity>
+<name>AdvKafkaProducer</name>
+<package>com/advantco/kafka</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/">
+<file path="com/advantco/kafka/AdvKafkaProducer.class" source-path="AdvKafkaProducer.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/">
+<file path="com/advantco/kafka/AdvKafkaProducer.java" source-path="AdvKafkaProducer.java"/>
+</fileset>
+</entity>
+<entity>
+<name>AdvKafkaStream</name>
+<package>com/advantco/kafka</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/">
+<file path="com/advantco/kafka/AdvKafkaStream$1.class" source-path="AdvKafkaStream$1.class"/>
+<file path="com/advantco/kafka/AdvKafkaStream.class" source-path="AdvKafkaStream.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/">
+<file path="com/advantco/kafka/AdvKafkaStream.java" source-path="AdvKafkaStream.java"/>
+</fileset>
+</entity>
+<entity>
+<name>Command</name>
+<package>com/advantco/kafka/ksql/computation</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/Command.class" source-path="Command.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/Command.java" source-path="Command.java"/>
+</fileset>
+</entity>
+<entity>
+<name>CommandId</name>
+<package>com/advantco/kafka/ksql/computation</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/CommandId$Type.class" source-path="CommandId$Type.class"/>
+<file path="com/advantco/kafka/ksql/computation/CommandId.class" source-path="CommandId.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/CommandId.java" source-path="CommandId.java"/>
+</fileset>
+</entity>
+<entity>
+<name>CommandIdAssigner</name>
+<package>com/advantco/kafka/ksql/computation</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/CommandIdAssigner.class" source-path="CommandIdAssigner.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/CommandIdAssigner.java" source-path="CommandIdAssigner.java"/>
+</fileset>
+</entity>
+<entity>
+<name>CommandRunner</name>
+<package>com/advantco/kafka/ksql/computation</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/CommandRunner.class" source-path="CommandRunner.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/CommandRunner.java" source-path="CommandRunner.java"/>
+</fileset>
+</entity>
+<entity>
+<name>CommandStatus</name>
+<package>com/advantco/kafka/ksql/computation</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/CommandStatus$Status.class" source-path="CommandStatus$Status.class"/>
+<file path="com/advantco/kafka/ksql/computation/CommandStatus.class" source-path="CommandStatus.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/CommandStatus.java" source-path="CommandStatus.java"/>
+</fileset>
+</entity>
+<entity>
+<name>CommandStatusEntity</name>
+<package>com/advantco/kafka/ksql/entity</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/CommandStatusEntity.class" source-path="CommandStatusEntity.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/CommandStatusEntity.java" source-path="CommandStatusEntity.java"/>
+</fileset>
+</entity>
+<entity>
+<name>CommandStatusFuture</name>
+<package>com/advantco/kafka/ksql/computation</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/CommandStatusFuture.class" source-path="CommandStatusFuture.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/CommandStatusFuture.java" source-path="CommandStatusFuture.java"/>
+</fileset>
+</entity>
+<entity>
+<name>CommandStore</name>
+<package>com/advantco/kafka/ksql/computation</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/CommandStore.class" source-path="CommandStore.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/computation/">
+<file path="com/advantco/kafka/ksql/computation/CommandStore.java" source-path="CommandStore.java"/>
+</fileset>
+</entity>
+<entity>
+<name>CommonConfigBuilder</name>
+<package>com/advantco/kafka/builder</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/CommonConfigBuilder.class" source-path="CommonConfigBuilder.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/CommonConfigBuilder.java" source-path="CommonConfigBuilder.java"/>
+</fileset>
+</entity>
+<entity>
+<name>ConsumerConfigBuilder</name>
+<package>com/advantco/kafka/builder</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/ConsumerConfigBuilder.class" source-path="ConsumerConfigBuilder.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/ConsumerConfigBuilder.java" source-path="ConsumerConfigBuilder.java"/>
+</fileset>
+</entity>
+<entity>
+<name>DataFormatBuilder</name>
+<package>com/advantco/kafka/builder</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/DataFormatBuilder.class" source-path="DataFormatBuilder.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/DataFormatBuilder.java" source-path="DataFormatBuilder.java"/>
+</fileset>
+</entity>
+<entity>
+<name>DumpLogs</name>
+<package>com/advantco/kafka/utils</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/utils/">
+<file path="com/advantco/kafka/utils/DumpLogs.class" source-path="DumpLogs.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/utils/">
+<file path="com/advantco/kafka/utils/DumpLogs.java" source-path="DumpLogs.java"/>
+</fileset>
+</entity>
+<entity>
+<name>EntityInfo</name>
+<package>com/advantco/kafka/ksql/entity</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/EntityInfo.class" source-path="EntityInfo.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/EntityInfo.java" source-path="EntityInfo.java"/>
+</fileset>
+</entity>
+<entity>
+<name>GeneralHelper</name>
+<package>com/advantco/kafka/utils</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/utils/">
+<file path="com/advantco/kafka/utils/GeneralHelper.class" source-path="GeneralHelper.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/utils/">
+<file path="com/advantco/kafka/utils/GeneralHelper.java" source-path="GeneralHelper.java"/>
+</fileset>
+</entity>
+<entity>
+<name>IAuth</name>
+<package>com/advantco/kafka/auth</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/auth/">
+<file path="com/advantco/kafka/auth/IAuth.class" source-path="IAuth.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/auth/">
+<file path="com/advantco/kafka/auth/IAuth.java" source-path="IAuth.java"/>
+</fileset>
+</entity>
+<entity>
+<name>IConfigBuilder</name>
+<package>com/advantco/kafka/builder</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/IConfigBuilder.class" source-path="IConfigBuilder.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/IConfigBuilder.java" source-path="IConfigBuilder.java"/>
+</fileset>
+</entity>
+<entity>
+<name>IVariableSubstitution</name>
+<package>com/advantco/kafka/varsubstitution</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/varsubstitution/">
+<file path="com/advantco/kafka/varsubstitution/IVariableSubstitution.class" source-path="IVariableSubstitution.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/varsubstitution/">
+<file path="com/advantco/kafka/varsubstitution/IVariableSubstitution.java" source-path="IVariableSubstitution.java"/>
+</fileset>
+</entity>
+<entity>
+<name>InvalidAuthException</name>
+<package>com/advantco/kafka/exception</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/exception/">
+<file path="com/advantco/kafka/exception/InvalidAuthException.class" source-path="InvalidAuthException.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/exception/">
+<file path="com/advantco/kafka/exception/InvalidAuthException.java" source-path="InvalidAuthException.java"/>
+</fileset>
+</entity>
+<entity>
+<name>InvalidDataFormatException</name>
+<package>com/advantco/kafka/exception</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/exception/">
+<file path="com/advantco/kafka/exception/InvalidDataFormatException.class" source-path="InvalidDataFormatException.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/exception/">
+<file path="com/advantco/kafka/exception/InvalidDataFormatException.java" source-path="InvalidDataFormatException.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KAvroDeserializer</name>
+<package>com/advantco/kafka/format/avro</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/format/avro/">
+<file path="com/advantco/kafka/format/avro/KAvroDeserializer.class" source-path="KAvroDeserializer.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/format/avro/">
+<file path="com/advantco/kafka/format/avro/KAvroDeserializer.java" source-path="KAvroDeserializer.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KAvroSerializer</name>
+<package>com/advantco/kafka/format/avro</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/format/avro/">
+<file path="com/advantco/kafka/format/avro/KAvroSerializer.class" source-path="KAvroSerializer.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/format/avro/">
+<file path="com/advantco/kafka/format/avro/KAvroSerializer.java" source-path="KAvroSerializer.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KBaseException</name>
+<package>com/advantco/kafka/exception</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/exception/">
+<file path="com/advantco/kafka/exception/KBaseException.class" source-path="KBaseException.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/exception/">
+<file path="com/advantco/kafka/exception/KBaseException.java" source-path="KBaseException.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KConfigContext</name>
+<package>com/advantco/kafka/builder</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/KConfigContext$1.class" source-path="KConfigContext$1.class"/>
+<file path="com/advantco/kafka/builder/KConfigContext$KConfigContextFactory.class" source-path="KConfigContext$KConfigContextFactory.class"/>
+<file path="com/advantco/kafka/builder/KConfigContext.class" source-path="KConfigContext.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/KConfigContext.java" source-path="KConfigContext.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KConsumerRecord</name>
+<package>com/advantco/kafka/record</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/record/">
+<file path="com/advantco/kafka/record/KConsumerRecord.class" source-path="KConsumerRecord.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/record/">
+<file path="com/advantco/kafka/record/KConsumerRecord.java" source-path="KConsumerRecord.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KLoggerWrapper</name>
+<package>com/advantco/kafka/utils</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/utils/">
+<file path="com/advantco/kafka/utils/KLoggerWrapper.class" source-path="KLoggerWrapper.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/utils/">
+<file path="com/advantco/kafka/utils/KLoggerWrapper.java" source-path="KLoggerWrapper.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KRecordMetadata</name>
+<package>com/advantco/kafka/record</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/record/">
+<file path="com/advantco/kafka/record/KRecordMetadata.class" source-path="KRecordMetadata.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/record/">
+<file path="com/advantco/kafka/record/KRecordMetadata.java" source-path="KRecordMetadata.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KSSLAuth</name>
+<package>com/advantco/kafka/auth</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/auth/">
+<file path="com/advantco/kafka/auth/KSSLAuth.class" source-path="KSSLAuth.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/auth/">
+<file path="com/advantco/kafka/auth/KSSLAuth.java" source-path="KSSLAuth.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KSaslAuth</name>
+<package>com/advantco/kafka/auth</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/auth/">
+<file path="com/advantco/kafka/auth/KSaslAuth.class" source-path="KSaslAuth.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/auth/">
+<file path="com/advantco/kafka/auth/KSaslAuth.java" source-path="KSaslAuth.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KSaslPlainAuth</name>
+<package>com/advantco/kafka/auth</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/auth/">
+<file path="com/advantco/kafka/auth/KSaslPlainAuth.class" source-path="KSaslPlainAuth.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/auth/">
+<file path="com/advantco/kafka/auth/KSaslPlainAuth.java" source-path="KSaslPlainAuth.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KSaslScramAuth</name>
+<package>com/advantco/kafka/auth</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/auth/">
+<file path="com/advantco/kafka/auth/KSaslScramAuth.class" source-path="KSaslScramAuth.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/auth/">
+<file path="com/advantco/kafka/auth/KSaslScramAuth.java" source-path="KSaslScramAuth.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KsqlEntity</name>
+<package>com/advantco/kafka/ksql/entity</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/KsqlEntity.class" source-path="KsqlEntity.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/KsqlEntity.java" source-path="KsqlEntity.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KsqlEntityList</name>
+<package>com/advantco/kafka/ksql/entity</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/KsqlEntityList.class" source-path="KsqlEntityList.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/KsqlEntityList.java" source-path="KsqlEntityList.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KsqlQuery</name>
+<package>com/advantco/kafka/ksql</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/">
+<file path="com/advantco/kafka/ksql/KsqlQuery.class" source-path="KsqlQuery.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/">
+<file path="com/advantco/kafka/ksql/KsqlQuery.java" source-path="KsqlQuery.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KsqlResource</name>
+<package>com/advantco/kafka/ksql</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/">
+<file path="com/advantco/kafka/ksql/KsqlResource$1.class" source-path="KsqlResource$1.class"/>
+<file path="com/advantco/kafka/ksql/KsqlResource.class" source-path="KsqlResource.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/">
+<file path="com/advantco/kafka/ksql/KsqlResource.java" source-path="KsqlResource.java"/>
+</fileset>
+</entity>
+<entity>
+<name>ProducerConfigBuilder</name>
+<package>com/advantco/kafka/builder</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/ProducerConfigBuilder.class" source-path="ProducerConfigBuilder.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/ProducerConfigBuilder.java" source-path="ProducerConfigBuilder.java"/>
+</fileset>
+</entity>
+<entity>
+<name>QueryStreaming</name>
+<package>com/advantco/kafka/ksql</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/">
+<file path="com/advantco/kafka/ksql/QueryStreaming$1.class" source-path="QueryStreaming$1.class"/>
+<file path="com/advantco/kafka/ksql/QueryStreaming$StreamsExceptionHandler.class" source-path="QueryStreaming$StreamsExceptionHandler.class"/>
+<file path="com/advantco/kafka/ksql/QueryStreaming.class" source-path="QueryStreaming.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/">
+<file path="com/advantco/kafka/ksql/QueryStreaming.java" source-path="QueryStreaming.java"/>
+</fileset>
+</entity>
+<entity>
+<name>SecurityConfigBuilder</name>
+<package>com/advantco/kafka/builder</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/SecurityConfigBuilder.class" source-path="SecurityConfigBuilder.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/SecurityConfigBuilder.java" source-path="SecurityConfigBuilder.java"/>
+</fileset>
+</entity>
+<entity>
+<name>SourceDescription</name>
+<package>com/advantco/kafka/ksql/entity</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/SourceDescription$FieldSchemaInfo.class" source-path="SourceDescription$FieldSchemaInfo.class"/>
+<file path="com/advantco/kafka/ksql/entity/SourceDescription.class" source-path="SourceDescription.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/SourceDescription.java" source-path="SourceDescription.java"/>
+</fileset>
+</entity>
+<entity>
+<name>StreamConfigBuilder</name>
+<package>com/advantco/kafka/builder</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/StreamConfigBuilder.class" source-path="StreamConfigBuilder.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/builder/">
+<file path="com/advantco/kafka/builder/StreamConfigBuilder.java" source-path="StreamConfigBuilder.java"/>
+</fileset>
+</entity>
+<entity>
+<name>StreamList</name>
+<package>com/advantco/kafka/ksql/entity</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/StreamList.class" source-path="StreamList.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/StreamList.java" source-path="StreamList.java"/>
+</fileset>
+</entity>
+<entity>
+<name>TableList</name>
+<package>com/advantco/kafka/ksql/entity</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/TableList.class" source-path="TableList.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/ksql/entity/">
+<file path="com/advantco/kafka/ksql/entity/TableList.java" source-path="TableList.java"/>
+</fileset>
+</entity>
+<entity>
+<name>AdvKafkaStream</name>
+<package>com/advantco/kafka</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Source</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/">
+<file path="com/advantco/kafka/AdvKafkaStream.java" source-path="AdvKafkaStream.java"/>
+</fileset>
+</entity>
+<entity>
+<name>KSSLAuth</name>
+<package>com/advantco/kafka/auth</package>
+<entity-type>Java Class</entity-type>
+<entity-sub-type>Source</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule/com/advantco/kafka/auth/">
+<file path="com/advantco/kafka/auth/KSSLAuth.java" source-path="KSSLAuth.java"/>
+</fileset>
+</entity>
+</entities>
+</content>
